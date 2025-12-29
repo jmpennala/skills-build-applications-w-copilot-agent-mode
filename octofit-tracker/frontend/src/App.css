@@ -1,0 +1,64 @@
+body {
+  background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+  color: #222a35;
+}
+
+.card {
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+}
+
+.navbar {
+  border-radius: 1rem;
+  background: linear-gradient(90deg, #007bff 0%, #00c6ff 100%) !important;
+}
+
+.navbar-brand img {
+  height: 40px;
+  margin-right: 12px;
+  vertical-align: middle;
+}
+
+.table {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background: #f3f8ff;
+}
+
+.table-dark th {
+  background: linear-gradient(90deg, #007bff 0%, #00c6ff 100%);
+  color: #fff;
+}
+
+.table th, .table td {
+  vertical-align: middle;
+  color: #222a35;
+}
+
+.btn {
+  border-radius: 0.5rem;
+  background: linear-gradient(90deg, #00c6ff 0%, #007bff 100%);
+  color: #fff;
+  border: none;
+}
+
+.btn:hover {
+  background: linear-gradient(90deg, #007bff 0%, #00c6ff 100%);
+  color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+  color: #007bff;
+}
+
+a, .nav-link {
+  color: #00c6ff !important;
+  text-decoration: none;
+}
+
+a:hover, .nav-link:hover {
+  color: #007bff !important;
+  text-decoration: underline;
+}
