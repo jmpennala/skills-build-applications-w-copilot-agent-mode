@@ -23,12 +23,18 @@ from .views import TeamViewSet, UserViewSet, WorkoutViewSet, ActivityViewSet, Le
 
 @api_view(['GET'])
 def api_root(request, format=None):
+    import os
+    codespace_name = os.environ.get('CODESPACE_NAME', None)
+    if codespace_name:
+        base_url = f"https://{codespace_name}-8000.app.github.dev"
+    else:
+        base_url = request.build_absolute_uri('/')[:-1]  # fallback to current host
     return Response({
-        'teams': request.build_absolute_uri('/api/teams/'),
-        'users': request.build_absolute_uri('/api/users/'),
-        'workouts': request.build_absolute_uri('/api/workouts/'),
-        'activities': request.build_absolute_uri('/api/activities/'),
-        'leaderboard': request.build_absolute_uri('/api/leaderboard/'),
+        'teams': f"{base_url}/api/teams/",
+        'users': f"{base_url}/api/users/",
+        'workouts': f"{base_url}/api/workouts/",
+        'activities': f"{base_url}/api/activities/",
+        'leaderboard': f"{base_url}/api/leaderboard/",
     })
 
 router = routers.DefaultRouter()
